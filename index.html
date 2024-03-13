@@ -15,66 +15,25 @@
         color: blueviolet;
       }
     </style>
-    <script>
-      function nightDay(self){
-        var target=document.querySelector('body');
-        if(self.value==='night'){
-          target.style.backgroundColor='black';
-          target.style.color='white';
-          self.value='day';
-          
-          var alist=document.querySelectorAll('a');
-          var i=0;
-          while(i<alist.length){
-            alist[i].style.color='powderblue';
-            i=i+1;
-          }
-        }else{
-          target.style.backgroundColor='white';
-          target.style.color='black';
-          self.value='night';
-
-          var alist=document.querySelectorAll('a');
-          var i=0;
-          while(i<alist.length){
-            alist[i].style.color='blue';
-            i=i+1;
-          }
-        }
-      }
-    </script>
+<script src="color.js"></script>
   </head>
   <body>
     <!-- style="background-color: black; color: white"-->
-    <h1><a href="index.html">WEB_001</a></h1>
+    <h1 align="center"><a href="index.html">WEB:INDEX</a></h1>
     
-    <!-- basic button -->
-    <input id="night_day" type="button" value="night" onclick="
-      if(document.querySelector('#night_day').value==='night'){
-        document.querySelector('body').style.backgroundColor='black';
-        document.querySelector('body').style.color='white';
-        document.querySelector('#night_day').value='day';
-      }else{
-        document.querySelector('body').style.backgroundColor='white';
-        document.querySelector('body').style.color='black';
-        document.querySelector('#night_day').value='night';
-      }
-   "/> 
-   
    <input type="button" value="night" onclick="
       nightDay(this);
     "/>
-    <ol>
-      <!-- ordered list -->
+
+    <ol><!-- ordered list -->
       <li><a href="1.html">HTML</a></li>
-      <li><a href="2.html">CSS</a></li>
-      <li><a href="3.html">JavaScript</a></li>
+      <li>CSS</a></li>
+      <li>JavaScript</a></li>
     </ol>
 
     <img src="bmo.jpg" width="20%" />
-    <h6>
-      <strong><u>BMO</u></strong>
-    </h6>
+    <h6><strong><u>BMO</u></strong></h6>
+    
     <h2 style="background-color: cornflowerblue; color: blue">
       <a href="https://unsplash.com" target="_blank" title="unsplash tab">
         <div>WEB</div>
@@ -83,30 +42,9 @@
     </h2>
 
     <p style="margin-top: 10px">
-      <!-- 속성, attribute -->
       <br />Beautiful,<span class="js">free images and photos</span> that you
       can download and use for any project. Better than any royalty free or
       stock photos.
     </p>
-
-    <p>
-      <span id="first" class="js">Adventure Time</span> was a ratings success
-      for Cartoon Network, with some of its episodes attracting over
-      <span>three million</span> viewers, and despite being aimed primarily at
-      children, the show has developed a following among teenagers and adults.
-      <span class="js">Adventure Time</span> has received universal acclaim from
-      critics, with much praise geared towards its originality and
-      worldbuilding. The show won eight
-      <span class="js">Primetime Emmy Awards</span>, a Peabody Award, three
-      Annie Awards, two British Academy Children's Awards, a Motion Picture
-      Sound Editors Award, and a Kerrang! Award.
-    </p>
-    <!--
-        <h1>This is heading 1</h1>
-        This is heading 2
-        <h3>This is heading 3</h3>
-        <h4>This is heading 4</h4>
-        <h5>This is heading 5</h5>
-        <h6>This is heading 6</h6> -->
   </body>
 </html>
