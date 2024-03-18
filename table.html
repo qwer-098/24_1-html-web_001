@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid white;
+        border-collapse: collapse; /* 합치기 */
+        border-radius: 10px; /* 둥글게 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- table row table data -->
+    <table>
+      <!-- border="5" -->
+      <thead>
+        <tr>
+          <th>뿅뿅</th>
+          <th>삥삥</th>
+          <th>뿡뿡</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>비비디</td>
+          <td rowspan="2">바비디</td>
+          <td>부</td>
+        </tr>
+        <tr>
+          <td>비비디</td>
+          <td>부</td>
+        </tr>
+        <tr>
+          <td colspan="3">비비디</td>
+        </tr>
+      </tbody>
+      <tfoot></tfoot>
+      <!-- 위치지정 -->
+      <div tabindex="0">
+        <!-- tab focus -1 비대화형 0 대화형-->
+      </div>
+    </table>
+  </body>
+</html>

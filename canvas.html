@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <mata charset="UTF-8">
+        <title></title>
+        <style>
+            .parent {
+                border: 2px solid blue;
+                color: blue;
+                background: lightskyblue;
+                padding: 1rem;
+            }
+
+            .child {
+                border: 2px dotted red;
+                color: red;
+                background: lightpink;
+                padding: 1rem;
+            }
+            .abs{
+                position:absolute;
+                top:0;
+                left:10px;
+                bottom:auto;
+                right:auto;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent" style="position: relative"> 
+        <!-- relative: child#2 in parent -->
+          Parent
+          <div class="child">Child #1</div>
+          <div class="child abs">Child #2</div>
+          <!-- absolute: all ground -->
+        </div>
+        <!-- 
+            static	위치 변경 불가능
+            relative 현재 위치를 기준으로 상대 위치를 지정. in parent, absolute의 기준 위치, z-index 지정 가능
+            absolute 부모 위치를 기준으로 절대 위치를 지정. all ground
+            fixed	위로가기버튼
+            sticky	html visual 같이 스크롤하다 고정
+         -->
+        <!-- point-event
+        none : HTML 요소에 정의된 클릭, 상태(hover,active등), 커서 옵션들이 비활성화한다. 
+        auto : 비활성화된 이벤트를 다시 기본 기능을 하도록 되돌린다. 
+        inherit : 부모 요소로부터 pointer-events 값을 상속받는다.
+        a[href="http://example.com"] {
+        pointer-events: none;
+        }-->
+        <!-- border 가장자리 -->
+
+        <canvas id="canvas" width="500" height="300"></canvas> 
+        <!-- canvas 요소 만들기 -->
+        <!-- b-b-d-ba-b-d-boo -->
+        <script type="text/javascript">
+            var canvas =document.getElementById("canvas");
+            var ctx = canvas.getContext('2d');
+
+		
+		ctx.beginPath();
+		
+		// 위치 이동
+        ctx.moveTo(50, 50);
+		// 현재 위치를 기준으로 해당 위치로 그리면서 이동
+		ctx.lineTo(100, 50);
+		// 현재 위치를 기준으로 해당 위치로 그리면서 이동
+		ctx.lineTo(100, 100);
+		// 현재 위치를 기준으로 해당 위치로 그리면서 이동
+		ctx.lineTo(50, 100);
+		
+		ctx.closePath();
+		
+		ctx.stroke();
+        <canvas id="canvas1" height="400" width="400">This browser doesn't support canvas</canvas>
+
+        </script> 
+        .lyrics { :auto; 
+            <!-- but 굳이 만들 건덕지를 만들지 말자 -->
+            overflow: hidden; 
+            <!-- 안보이는 부분 자르기 -->
+            overflow-y: scroll; 
+                    <!-- 스크롤 생성 -->
+            white-space:nowrap; 
+            <!-- 줄바꿈 되지 않고 가로 스크롤바 -->
+          }
+    </body>
+</html>
