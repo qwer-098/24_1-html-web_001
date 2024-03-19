@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>WEB_002: INDEX</title>
+    <style>
+      .title {
+        font-weight: bold;
+        color: blue;
+      }
+      .title:hover {
+        background: orange;
+      }
+      #grid {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      /* #grid ol {
+          border-right: 1px black solid;
+        } */
+      h1 {
+        text-align: center;
+        /* border-bottom: 1px black solid; */
+      }
+    </style>
+    <stript src="night_day.js"></stript>
+  </head>
+  <body>
+    <h1 display="inline">
+      <!-- href="index.html" -->
+      <a
+        title="INDEX"
+        value="night"
+        id="night_day"
+        onclick="
+      if(document.querySelector('#night_day').value==='night'){
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('#night_day').value='day';
+      }else{
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('#night_day').value='night';
+      }
+   "
+        >INDEX</a
+      >
+    </h1>
+
+    <h3 class="skyblue_btn">qwer</h3>
+    <!-- <input
+      type="button"
+      value="night"
+      onclick="nightDay(this);
+"
+    /> -->
+
+    <div id="grid">
+      <ol>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+      </ol>
+
+      <div>
+        <h3>BMO</h3>
+        <span class="title">BMO</span> (abbreviated from "Be MOre," phonetically
+        spelled "Beemo", also referred to as Moe Mastro "Llabtoof" Giovanni Jr.
+        and called the "New King of Ooo" in the future) is one of the main
+        characters of <span class="title"> Adventure Time</span> and also the
+        titular main protagonist of the Distant Lands episode of the same name.
+
+        <p>
+          BMO is a living prototype video game console system, portable
+          electrical outlet, computer, music player, VCR, video player, video
+          editor, roommate, camera, alarm clock, toaster, flashlight, strobe
+          light, skateboarder, soccer player, tape player, chef, detective and
+          friend who is owned by <span class="title">Finn</span>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
