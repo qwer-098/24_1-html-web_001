@@ -5,9 +5,12 @@
       table,
       th,
       td {
-        border: 1px solid white;
+        border: 1px solid black;
         border-collapse: collapse; /* 합치기 */
-        border-radius: 10px; /* 둥글게 */
+        /* border-radius: 10px; 둥글게 */
+      }
+      form {
+        display: inline;
       }
     </style>
   </head>
@@ -42,5 +45,38 @@
         <!-- tab focus -1 비대화형 0 대화형-->
       </div>
     </table>
+    <form action="http://localhost/login.php">
+      <p>
+        <label for="id_txt">id</label>:
+        <input id="id_txt" type="text" name="id" value="input id" />
+      </p>
+      <label>
+        <p>pw: <input type="password" name="pw" value="input pw" /></p>
+      </label>
+      <p>
+        textarea:
+        <textarea cols="50" rows="2">input textarea</textarea>
+      </p>
+      <input type="submit" />
+    </form>
+    <form action="http://localhost/login.php">
+      <h1>COLOR</h1>
+
+      <select name="color">
+        <!--multiple -->
+        <option value="red">붉은색</option>
+        <option value="black">검은색</option>
+        <option value="blue">파란색</option>
+      </select>
+
+      <input type="radio" name="ra" value="red" checked />붉은색
+      <input type="radio" name="ra" value="black" />검은색
+      <input type="radio" name="ra" value="blue" />파란색
+
+      <label><input type="checkbox" name="che" value="red" />asdf</label>
+      <input type="checkbox" name="che" value="red" />asdf
+      <input type="checkbox" name="che" value="red" />asdf
+      <input type="submit" />
+    </form>
   </body>
 </html>
